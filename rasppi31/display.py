@@ -219,13 +219,15 @@ class Updater(threading.Thread):
             msg = 'Stue: {:.1f}%  '.format(value)
             self.display.canvas.itemconfigure(self.display.stue_hum, text=msg)
 
-            # value = self.read_network_value('192.168.1.27', b'home_temperature_bathroom#raw')
-            # msg = 'Temp. bad: {:.3f}C'.format(value)
-            # self.display.canvas.itemconfigure(self.display.bad_temp, text=msg)
+            value = self.read_network_value('192.168.1.27', b'home_temperature_bathroom#raw')
+            if value > 0:
+                msg = 'Bad: {:.2f}C'.format(value)
+                self.display.canvas.itemconfigure(self.display.bad_temp, text=msg)
 
-            # value = self.read_network_value('192.168.1.27', b'home_humidity_bathroom#raw')
-            # msg = 'Fugt bad: {:.3f}%'.format(value)
-            # self.display.canvas.itemconfigure(self.display.bad_hum, text=msg)
+            value = self.read_network_value('192.168.1.27', b'home_humidity_bathroom#raw')
+            if value > 0:
+                msg = 'Bad: {:.2f}%'.format(value)
+                self.display.canvas.itemconfigure(self.display.bad_hum, text=msg)
 
             value = self.read_network_value('192.168.1.28', b'home_temperature_sias_room#raw')
             msg = 'Sia:   {:.1f}C  '.format(value)
