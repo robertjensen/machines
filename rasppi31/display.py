@@ -244,62 +244,6 @@ class Updater(threading.Thread):
 
 
 class Display(object):
-    # def ___init__(self):
-    #     self.root = Tk()
-    #     self.root.geometry('480x800')
-    #     self.root.overrideredirect(1)  # Fullscreen
-    #     self.root.config(cursor="none")
-    #     self.root.bind('<Button 1>', self.mouse_click)
-    #     self.canvas = Canvas(self.root, width=480, height=800, bg='white')
-
-    #     self.hiding_forecast = False
-
-    #     self.canvas.create_text(10, 5, fill="red", font=HEADLINE, text='Temperatur', anchor='nw')
-    #     self.canvas.create_text(240, 5, fill="red", font=HEADLINE, text='Fugt', anchor='nw')
-        
-    #     self.stue_temp = self.canvas.create_text(
-    #         10, 40, fill="darkblue", font=FONT, text='Stue .....C', anchor='nw')
-    #     self.stue_hum = self.canvas.create_text(
-    #         240, 40, fill="darkblue", font=FONT, text='Stue ....0%', anchor='nw')
-
-    #     self.bad_temp = self.canvas.create_text(
-    #         10, 75, fill="darkblue", font=FONT, text='Bad', anchor='nw')
-    #     self.bad_hum = self.canvas.create_text(
-    #         240, 75, fill="darkblue", font=FONT, text='Bad', anchor='nw')
-
-    #     self.sia_temp = self.canvas.create_text(
-    #         10, 110, fill="darkblue", font=FONT, text='Sia .....C', anchor='nw')
-    #     self.sia_hum = self.canvas.create_text(
-    #         240, 110, fill="darkblue", font=FONT, text='Sia .....%', anchor='nw')
-
-    #     self.stue_dust = self.canvas.create_text(
-    #         10, 160, fill="darkblue", font=FONT, text='Støv ....μg/cm³', anchor='nw')
-
-    #     self.canvas.create_text(10, 210, fill="red", font=HEADLINE,
-    #                             text='Vejret udenfor', anchor='nw')
-    #     self.out_temp = self.canvas.create_text(
-    #         10, 245, fill="darkblue", font=FONT, text='Temperatur: ', anchor='nw')
-    #     self.out_hum = self.canvas.create_text(
-    #         240, 245, fill="darkblue", font=FONT, text='Luftfugtighed: ', anchor='nw')
-
-    #     self.out_wind = self.canvas.create_text(
-    #         10, 280, fill="darkblue", font=FONT, text='Vind: ', anchor='nw')
-    #     #self.out_wind_gust = self.canvas.create_text(
-    #     #    150, 250, fill="darkblue", font=FONT, text='Stød: ', anchor='nw')
-    #     self.out_wind_dir = self.canvas.create_text(
-    #         280, 280, fill="darkblue", font=FONT, text='Retning: ', anchor='nw')
-
-    #     # tid, pressure':  'sunrise':  'sunset':, 'uv_index'
-
-    #     forecast_placeholder = ImageTk.PhotoImage(Image.new('RGBA', (1, 1), '#00000000'))
-    #     self.forecast_display = self.canvas.create_image(
-    #         0, 800, image=forecast_placeholder, anchor='nw')
-        
-    #     # Start thread to get newest forefocast from DMI
-    #     self.fu = ForecastUpdater(self)
-    #     self.fu.start()
-    #     self.canvas.pack()
-
     def __init__(self):
         self.root = Tk()
         self.root.geometry('480x800')
