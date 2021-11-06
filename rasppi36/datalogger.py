@@ -59,7 +59,7 @@ def main():
     print('wait start 20s')
     time.sleep(25)
     print('Wait end')
-    codenames = ['home_temperature_bedhroom', 'home_humidity_bedroom']
+    codenames = ['home_temperature_bedroom', 'home_humidity_bedroom']
 
     loggers = {}
     loggers[codenames[0]] = ValueLogger(reader, comp_val=0.25, comp_type='lin',
